@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* 基础样式 了解Sass 以编程的思想编写css代码 Sass语法： 兼容css语法 注释 单行 多行 变量 默认只能用在属性值 特殊用法 在选择器中使用变量 在属性名中使用变量 list类型（类似js中的数组） nth() map类型 map-get() 函数 内置函数 自定义函数 把Sass编译成css */
+a { color: #333; }
+
+a:hover { color: #58bc58; text-decoration: underline; }
+
+body { margin: 0; padding: 0; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+.content { padding: 10px 20px 30px 40px; }
+
+.btop { border-top: 10px; }
+
+.bbottom { border-bottom: 20px; }
+
+h1 { font-size: 2em; color: #f00; }
+
+h1 { font-size: 60px; }
+
+h2 { font-size: 30px; }
+
+h3 { font-size: 20px; }
+
+h4 { font-size: 15px; }
+
+h5 { font-size: 12px; }
+
+h6 { font-size: 10px; }
+
+.box { width: 400 px; height: 15 px; }
+
+.mybox { width: 600px; height: 50px; }
+
+.mybox span { display: inline-block; margin: 0 5px; width: 100px; height: 50px; }
+
+.mybox span:nth-child(1) { background-color: #e60000; }
+
+.mybox span:nth-child(2) { background-color: #cc0000; }
+
+.mybox span:nth-child(3) { background-color: #b30000; }
+
+.mybox span:nth-child(4) { background-color: #990000; }
+
+.mybox span:nth-child(5) { background-color: maroon; }

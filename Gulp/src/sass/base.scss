@@ -1,0 +1,84 @@
+/*
+	基础样式
+
+	了解Sass
+		* 以编程的思想编写css代码
+
+	Sass语法：
+		* 兼容css语法
+		* 注释
+			* 单行
+			* 多行
+		* 变量
+			* 默认只能用在属性值
+			* 特殊用法
+				* 在选择器中使用变量
+				* 在属性名中使用变量
+			* list类型（类似js中的数组）
+				* nth()
+			* map类型
+				* map-get()
+
+
+
+		* 函数
+			* 内置函数
+			* 自定义函数
+				
+
+	把Sass编译成css
+ */
+
+// 引入变量
+@import 'var';
+
+// 变量
+// $mainColor:#58bc58;
+// $container:1200px;
+// $sidebar:300px;
+// $mainConent:800px;
+
+// list类型
+$padding:10px 20px 30px 40px;
+
+// map类型
+$headings: (h1: 2em, h2: 1.5em, h3: 1.2em);
+
+
+a{color:#333;}
+a:hover{color:$mainColor;text-decoration:underline;}
+
+body{margin:0;padding:0;}
+ul{list-style:none;padding:0;margin:0;}
+
+
+//使用
+.content{padding:$padding;}
+.btop{border-top:nth($padding,1);}
+.bbottom{border-bottom:nth($padding,2)}
+
+h1{font-size:map-get($headings,h1);color:#f00;}
+
+@for $i from 1 to 7{
+	h#{$i}{
+		font-size:30px/$i*2;
+	}
+}
+
+
+// 函数
+@function sum($num1:5,$num2:10){
+	@return $num1+$num2
+}
+
+.box{width:sum(100,300)px;height:sum()px;}
+
+
+.mybox{width:600px;height:50px;}
+.mybox span{display:inline-block;margin:0 5px;width:100px;height:50px;}
+
+@for $i from 1 to 6{
+	.mybox span:nth-child(#{$i}){
+		background-color:darken(#f00,percentage($i/20));
+	}
+}

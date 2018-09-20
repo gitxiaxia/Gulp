@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* 基础样式 了解Sass 以编程的思想编写css代码 Sass语法： 兼容css语法 注释 单行 多行 变量 默认只能用在属性值 特殊用法 在选择器中使用变量 在属性名中使用变量 list类型（类似js中的数组） nth() map类型 map-get() 函数 内置函数 自定义函数 嵌套 选择器嵌套 继承 @extend 把Sass编译成css */
+div.goodslist, ul.list { border: 1px solid #ddd; }
+
+div.goodslist ul, ul.list ul { overflow: hidden; list-style: none; padding: 0; margin: 0; border-bottom: 1px solid #ddd; }
+
+div.goodslist ul li, ul.list ul li { width: 200px; height: 400px; float: left; margin-right: 20px; padding-right: 20px; border-right: 1px dotted #ddd; }
+
+div.goodslist ul li h4, ul.list ul li h4 { font-size: 16px; margin: 0; }
+
+div.content, ul.list { padding: 10px; border: 2px solid #ddd; margin: 5px 10px; }
+
+div.page, div.content { border-bottom: 2px solid #ddd; padding: 15px; }
+
+div.content { font-size: 16px; color: #333; }
